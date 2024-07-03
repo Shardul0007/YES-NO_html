@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+#no{
+    border:black;
+    border-style: solid;
+    border-width:1px;
+    background-color: aquamarine;
+    color:black;
+    font-size:15px;
+    padding:5px;
+    margin-left:5px;
+    margin-top:5px;
+    width:150px;
+    height:50px;
+    position: absolute;
+    top:100px;
+}
+</style>
+    </head>
+    <body>
+        <button   id="no">No</button>
+        <script>
+            const maxwidth=150;
+            const maxheight=50;
+            const maxwindowwidth=window.innerWidth-maxwidth;
+            const maxwindowheight=window.innerHeight-maxheight;
+        
+window.addEventListener("DOMContentLoaded", ()=>{
+    const button=document.getElementById("no");
+   button.addEventListener("mouseover", ()=>{
+    button.style.top=Math.floor(Math.random()*(maxwindowheight+1))+'px';
+    button.style.left=Math.floor(Math.random()*(maxwindowwidth+1))+'px';
+    button.style.color='black';
+  
+});
+
+});
+
+
+          
+        </script>
+    </body>
+</html>
